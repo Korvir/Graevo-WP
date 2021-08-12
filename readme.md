@@ -6,11 +6,6 @@
 
     npm install
 
-3. Checkout to new branch.
-
-4. Enjoy this shit =)
 
 
----
-DB example attached in root directory
 
