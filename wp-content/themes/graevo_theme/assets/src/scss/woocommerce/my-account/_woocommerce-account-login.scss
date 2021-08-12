@@ -1,0 +1,46 @@
+.woocommerce{
+
+	&-form-login{
+		.radio-checkbox-list{
+		}
+	}
+
+	&-form-register{
+		.woocommerce-password-strength{
+			margin-top: 1em;
+		}
+	}
+
+}
+
+
+/* purgecss start ignore */
+.woocommerce form .show-password-input::after,
+.woocommerce-page form .show-password-input::after {
+	font-family: "Font Awesome 5 Free";
+	speak: never;
+	font-weight: 400;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-left: .618em;
+	content: "\f06e";
+	text-decoration: none;
+}
+
+
+
+.wp-social-login{
+	&-connect-with{
+		display: none !important;
+	}
+	&-provider-list{
+		@include flex( row, center, center);
+		@include media(sm){
+			@include flex( column );
+		}
+	}
+}
+
+/* purgecss end ignore */

@@ -1,0 +1,357 @@
+// General
+.product_qty_custom {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	//border: 1px solid #D4AF37;
+	padding: 5px 10px;
+	height: 45px;
+
+	.product_qty_symbol {
+		display: flex;
+		height: 45px;
+		align-items: center;
+		@include media(md) {
+			justify-content: flex-end;
+		}
+
+		.product_qty_plus, .product_qty_minus {
+			@include flex( row, center, center);
+			box-sizing: border-box;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 14px;
+			//line-height: 18px;
+			color: $c_white;
+			opacity: .8;
+			cursor: pointer;
+			width: 25px;
+			height: 25px;
+			text-align: center;
+			user-select: none;
+			border: 1px solid $c_white;
+			border-radius: 50%;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		.product_qty_plus {
+			order: 3;
+		}
+
+		.product_qty_minus {
+			order: 1;
+		}
+
+		.quantity {
+			order: 2;
+
+			input {
+
+				font-style: normal;
+				font-weight: 600;
+				font-size: 24px;
+				line-height: 21px;
+				color: $c_white;
+				width: 50px;
+				-webkit-appearance: none;
+				appearance: none;
+				background: transparent!important;
+				padding:5px;
+				margin: 5px;
+				text-align: center;
+				display: block;
+				border: none;
+
+			}
+
+			input::-webkit-outer-spin-button,
+			input::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+
+			input[type=number] {
+				-moz-appearance: textfield;
+			}
+		}
+	}
+}
+.woocommerce-notices-wrapper{
+	> *{
+		border-bottom: 2px solid $c_yellow_dark;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 19px;
+		color: $c_white;
+		padding: 2rem 1rem;
+		@include media(sm){
+			padding: .6rem .3rem;
+			font-size: .875rem;
+		}
+		a.button{
+			@include media(sm){
+				display: block;
+				float: none!important;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+}
+
+
+//archive
+
+/* purgecss start ignore */
+.woocommerce-shop-menu-wrap{
+	border-bottom: 1px solid  rgba(255, 255, 255, 0.2);
+	position: relative;
+	z-index: 2;
+	padding-top: 2.5rem;
+	padding-bottom: 1.5rem;
+	font-family: 'BravoSC';
+	color: $c_white;
+	@include media(xl){
+		padding: 1rem 0;
+	}
+	.woocommerce-shop-menu{
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	.ordering{
+		flex: 0 0 250px;
+		max-width: 250px;
+		padding-bottom: 1rem;
+		@include media(xl){
+			flex: 0 0 100%;
+			max-width: 250px;
+			width: 100%;
+			margin: 0 auto;
+			padding-bottom: 0;
+		}
+		@include media(md){
+			max-width: 200px;
+		}
+		select{
+			text-transform: uppercase;
+			font-size: 0.85em;
+			line-height: 1.25;
+			outline: none;
+			width: 100%;
+			color: $c_yellow_dark;
+			@include media(md){
+				font-size: 12px;
+			}
+		}
+	}
+	.shop_nav{
+
+		//flex: 0 0 70%;
+		//max-width: 70%;
+		@include media(xl){
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 1em 0;
+		}
+		ul{
+			max-width: 80%;
+			margin: 0 auto;
+			padding: 0;
+			flex-wrap: wrap;
+			@include media(xl){
+				max-width: 100%;
+			}
+
+			li{
+				@include flex( column, center, center);
+				position: relative;
+				padding: 0;
+				@include media(lg){
+					padding: 0 15px;
+					margin: 10px 0;
+				}
+				a{
+					color: $c_white;
+					font-size: 1.375rem;
+					line-height: 1;
+					text-transform: uppercase;
+					padding: 5px 0;
+					border-bottom: 1px solid transparent;
+					transition: 0.3s border;
+					//padding-bottom: 1rem;
+					@include media(rwd){
+						font-size: 1rem;
+					}
+					@include media(md){
+						font-size: 0.875rem;
+						//padding-bottom: 5px;
+					}
+					@include media(sm){
+						font-size: 0.675rem;
+					}
+				}
+				&.current-menu-item{
+					a{
+						border-color: $c_yellow_light;
+						color: $c_yellow_light;
+					}
+				}
+				/* purgecss end ignore */
+				&:hover{
+					a{
+						border-color: $c_yellow_light;
+					}
+				}
+
+			}
+		}
+	}
+
+}
+
+/* purgecss end ignore */
+
+.shop_not_found_product{
+	height: 70vh;
+	font-size: 1.6rem;
+	@include media(md){
+		height: 50vh;
+		font-size: 1rem;
+	}
+}
+/* purgecss start ignore */
+.archive{
+	&.woocommerce-page {
+		ul.products {
+			padding: 0;
+			li.product {
+				margin-bottom: 12rem;
+				@include media(xl){
+					margin-bottom: 10rem;
+				}
+				@include media(sm){
+					margin-bottom: 3rem;
+				}
+			}
+
+			.product_cat{
+				&-akczijni-tovary{
+					a.button{
+						background-color: $c_red_dark;
+						border: $c_red_dark;
+						&:hover{
+							background-color: $c_red_light;
+							border: $c_red_light;
+						}
+					}
+				}
+			}
+
+		}
+
+	}
+	.decor{
+		position: absolute;
+		&--grapes{
+			top: 7rem;
+			left: 0;
+			opacity: .4;
+			z-index: 0;
+			@include media(sm){
+				top: 0rem;
+				left: -106px;
+				width: 70px;
+			}
+			svg{
+				@include media(sm){
+					transform: scale(.5);
+				}
+			}
+
+		}
+		&--burrel{
+			bottom: -7rem;
+			right: 0;
+			z-index: -1;
+			@include media(sm){
+				bottom: -8.5rem;
+				right: -100px;
+			}
+			svg{
+				@include media(sm){
+					transform: scale(.2);
+				}
+			}
+		}
+	}
+}
+/* purgecss end ignore */
+
+.loop_products_list_wrap{
+	margin-top: 15rem;
+	@include media(xl){
+		margin-top: 10rem;
+	}
+	@include media(sm){
+		margin-top: 3rem;
+	}
+}
+
+
+/* purgecss start ignore */
+//pagination
+.woocommerce-pagination{
+	text-align: center;
+	margin-bottom: 6.25rem;
+	ul.page-numbers{
+		padding: 0;
+		margin: 0;
+		li{
+			margin: 10px 10px;
+			@include media(sm){
+				margin: 5px 5px;
+			}
+			span.current,
+			a.page-numbers{
+				font-size: 1.125rem;
+				color: $c_white;
+				display: inline-block;
+				transition: 0.3s background-color, color, border-color;
+			}
+			a.page-numbers,
+			span.current{
+				border: 1px solid $c_yellow_light;
+				border-radius: 5px;
+				padding: 10.5px 19px;
+				@include media(sm){
+					padding: 5.5px 14px;
+				}
+			}
+			a.next{
+				padding: 10.5px 19px;
+				@include media(sm){
+					padding: 5.5px 14px;
+				}
+			}
+			span.current{
+				background: $c_yellow_dark;
+				color: $c_white;
+			}
+			&:hover{
+				span.current,
+				a.next,
+				a.page-numbers{
+					background: $c_yellow_dark;
+					color: $c_white;
+				}
+			}
+		}
+	}
+
+}
+/* purgecss end ignore */

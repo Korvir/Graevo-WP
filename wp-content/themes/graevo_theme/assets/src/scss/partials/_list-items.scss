@@ -1,0 +1,18 @@
+.partials{
+
+	&-list{
+
+		&-answer{
+
+			&--block{
+				border-bottom: 1px solid $c_grey_light;
+				&:first-child{
+					border-top: 1px solid $c_grey_light;
+				}
+			}
+
+		}
+
+	}
+
+}

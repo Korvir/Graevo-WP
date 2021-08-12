@@ -1,0 +1,67 @@
+footer{
+
+	.decorate-line{
+		width: 130px;
+		height: 1px;
+		background-color: $c_yellow_dark;
+		@include media(lg){
+			width: 60px;
+		}
+	}
+
+	.social-networks{
+		max-width: 150px;
+		width: 100%;
+		font-weight: 400;
+		font-size: 1.688em;
+		color: #D4AF37;
+		margin-left: 6.25rem;
+		@include media(xl){
+			margin-left: 2.25rem;
+		}
+		@include media(lg){
+			font-size: 1.2em;
+		}
+		@include media(md){
+			font-size: 1.688em;
+		}
+		@include media(sm){
+			margin-left: 0;
+		}
+		&:hover{
+			color: $c_yellow_dark;
+		}
+		&:first-child{
+			margin-left: 3.15rem;
+			@include media(md){
+				margin-left: 0;
+			}
+		}
+		&:last-child {
+			@include media(sm){
+				border-bottom: unset !important;
+			}
+		}
+		@include media(sm){
+			border-bottom: 1px solid $c_yellow_dark;
+		}
+	}
+	/* purgecss start ignore */
+	.footer-menu{
+		ul{
+			margin-bottom: 0;
+			@include media(md){
+				flex-direction: column;
+			}
+			li{
+				margin-left: 20px;
+				@include media(md){
+					margin-top: 10px;
+				}
+			}
+		}
+
+	}
+	/* purgecss end ignore */
+
+}

@@ -1,0 +1,189 @@
+.wysiwyg-editor{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.25em;
+    color: $c_white;
+
+    //margin: 70px 0;
+
+    img.alignright { float: right; margin: 0 0 1em 1em; }
+    img.alignleft { float: left; margin: 0 1em 1em 0; }
+    img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+    .alignright { float: right; }
+    .alignleft { float: left; }
+    .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+    .mce-content-body table {
+        width: 100%;
+    }
+
+    img{
+        max-width: 100%;
+        @include media(sm){
+            width: 100%;
+        }
+    }
+
+    h1,  h1 * {
+        margin: 1.15em 0 1.5em;;
+        font-weight: bold;
+		font-size: 3em;
+		line-height: 2.5em;
+		color: $c_yellow_light;
+    }
+    h2,  h2 * {
+        margin: 0.95rem 0 1.5em;;
+        font-weight: bold;
+		font-size: 2em;
+		line-height: 1.75em;
+		color: $c_yellow_light;
+    }
+    h3,  h3 * {
+        margin: 0.75rem 0 1.5em;;
+        font-weight: bold;
+		font-size: 1.5em;
+		line-height: 1.25em;
+		color: $c_yellow_light;
+    }
+    h4,  h4 * {
+        margin: 0.5rem 0 1.5em;;
+        font-weight: bold;
+		font-size: 1.25em;
+		line-height: 1em;
+		color: $c_yellow_light;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    p span,
+    p span strong{
+        font-size: 1.125em !important;
+		color: $c_beige_light;
+    }
+
+    p strong span,
+    p b span{
+        font-size: 1.125em !important;
+        font-weight: bold;
+		color: $c_beige_light;
+    }
+
+	p strong,
+	p b{
+		font-size: 1.125em !important;
+		font-weight: bold;
+		color: $c_beige_light;
+	}
+
+    p em span,
+    p i span{
+        font-size: 1.125em !important;
+        font-style: italic;
+    }
+
+    p sub span,
+    p sup span{
+        font-size: 18px !important;
+    }
+
+    p span strong,
+    p span em,
+    p span i,
+    p span b,
+    p span sub,
+    p span sup,
+    p span > strong,
+    p span > em,
+    p span > i,
+    p span > b,
+    p span > sub,
+    p span > sup {
+        font-size: 18px !important;
+    }
+    a {
+        color: $c_yellow_dark;
+        font-size: 1em;
+        &:hover{
+            color: $c_yellow_light;
+        }
+    }
+
+	ul,
+	ol {
+        font-size: 1em;
+        padding-left: 0;
+        margin-bottom: 1em;
+		list-style: none;
+    }
+
+	// Change default bullets style
+	ul li::before {
+		content: '';
+		color: $c_yellow_light;
+		background-color: $c_yellow_light;
+		border-radius: 50%;
+		font-weight: bold;
+		display: inline-block;
+		width: 7px;
+		height: 7px;
+		margin-right: 0.75em;
+	}
+
+    ul > li,
+    ol > li {
+        font-size: 1em;
+        margin-bottom: 0.5em;
+    }
+
+    li > ul,
+    li > ol {
+        font-size: 1em;
+        padding-left: 1.125em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+		list-style: circle;
+    }
+
+
+    li > ul li,
+    li > ol li {
+        font-size: 1em;
+    }
+
+	li strong{
+		color: $c_dark;
+	}
+
+    .wysiwyg_table {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .wysiwyg_table table {
+        min-width: calc(100% - 2px);
+        /*border: 1px solid #444;*/
+        margin: 0!important;
+        padding: 0!important;
+    }
+
+    .wysiwyg_table table td {
+        /*border: 1px solid #444;*/
+        padding: 0.3em;
+    }
+
+    .wysiwyg_table table tr {
+        /* border: 1px solid #444;*/
+
+    }
+
+    table p {
+        margin-bottom: 0;
+    }
+
+
+}

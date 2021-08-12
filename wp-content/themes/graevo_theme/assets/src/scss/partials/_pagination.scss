@@ -1,0 +1,24 @@
+/* purgecss start ignore */
+.pagination{
+	font-weight: 500;
+	font-size: 1.25em;
+
+	.page-numbers{
+		padding: 0 5px;
+		&:hover{
+			color: $c_dark;
+		}
+	}
+
+	.page-numbers.current{
+		color: $c_dark;
+		border-bottom: 2px solid $c_dark;
+	}
+
+	.page-numbers.prev,
+	.page-numbers.next{
+
+	}
+
+}
+/* purgecss end ignore */

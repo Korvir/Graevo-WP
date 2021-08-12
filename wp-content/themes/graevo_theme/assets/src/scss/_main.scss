@@ -1,0 +1,176 @@
+body{
+	@include media(sm){
+		font-size: 14px;
+	}
+}
+
+a:not([href]) {
+	cursor: pointer;
+}
+section{
+	position: relative;
+}
+.overflow_this{
+	overflow: hidden;
+}
+
+.container-1400{
+	max-width: 1430px ;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.container-1300{
+	max-width: 1330px ;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	margin: 0;
+}
+
+h1, .h1{
+	font-size: 4em;
+	@include media(md){
+		font-size: 2.5em;
+	}
+}
+
+h2, .h2{
+	font-size: 3em;
+	@include media(md){
+		font-size: 2.15em;
+	}
+}
+
+h3, .h3{
+	font-size: 2em;
+	@include media(md){
+		font-size: 1.75em;
+	}
+}
+
+h4, .h4{
+	font-size: 1.5em;
+	@include media(md){
+		font-size: 1.25em;
+	}
+}
+
+h5, .h5{
+	font-size: 1.25em;
+	@include media(md){
+		font-size: 1.15em;
+	}
+}
+
+.font-prata{
+	font-family: 'Prata', serif;
+}
+
+ul{
+	list-style: none;
+}
+
+img.lazyload:not([src]),
+img.lazyloaded:not([src]){
+	visibility: hidden;
+}
+
+img.bg-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	z-index: -1;
+}
+
+.blur-up{
+	filter: blur(5px);
+	-webkit-filter: blur(5px);
+	transition: filter 400ms, -webkit-filter 400ms;
+}
+.blur-up.lazyloaded {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+img-zoomable,
+.modal-zoom{
+	transition: 0.3s width;
+}
+.mb-zoom{
+	cursor: zoom-in;
+}
+
+.with-underline{
+	position: relative;
+	&:after{
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 1px;
+		background-color: $c_yellow_dark;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.with_border_top{
+	border-top: 1px solid $c_yellow_light;
+}
+a{
+	color: $c_yellow_dark;
+	transition: 0.3s color;
+	&:hover{
+		color: $c_yellow_light;
+		text-decoration: none;
+	}
+}
+
+
+@include media(lg){
+	iframe{
+		width: 100%;
+	}
+}
+
+select{
+	background: transparent;
+	color: $c_white;
+	font-size: 1em;
+	border: none;
+	-webkit-appearance:none;
+	background-image: url("data:image/svg+xml,%0A%3Csvg width='11' height='6' viewBox='0 0 11 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.02094 5.54711L0.120151 0.694033C-0.0403231 0.535027 -0.0400534 0.277594 0.120981 0.118855C0.281995 -0.0397611 0.542825 -0.0393512 0.703424 0.119675L5.31252 4.68388L9.92159 0.119511C10.0822 -0.0394947 10.3429 -0.0399046 10.5039 0.118691C10.5846 0.198265 10.625 0.302514 10.625 0.406762C10.625 0.510743 10.5849 0.614581 10.5047 0.694012L5.60408 5.54711C5.52693 5.62369 5.42192 5.66667 5.31252 5.66667C5.20312 5.66667 5.09824 5.62357 5.02094 5.54711Z' fill='white'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position-x: 100%;
+	background-position-y: 5px;
+	padding-right: 2rem;
+}
+
+
+.flickity-button {
+	background: transparent;
+	color: $c_yellow_dark;
+	transition: 0.3s color;
+	&:hover{
+		color: $c_yellow_light;
+		background: transparent;
+	}
+}
+
+
+.flickity-enabled.is-draggable .flickity-viewport{
+	cursor: unset;
+}

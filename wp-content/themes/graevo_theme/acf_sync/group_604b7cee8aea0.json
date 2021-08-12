@@ -1,0 +1,41 @@
+{
+    "key": "group_604b7cee8aea0",
+    "title": "Дата та час події",
+    "fields": [
+        {
+            "key": "field_604b7d0207f05",
+            "label": "Дата та час події",
+            "name": "date_time_event",
+            "type": "date_time_picker",
+            "instructions": "Дата та час на якій прізначене проведення події фбо заходу",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y H:i",
+            "return_format": "Y-m-d H:i",
+            "first_day": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "cpt_events"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1615562886
+}

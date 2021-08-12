@@ -1,0 +1,52 @@
+.template-contacts{
+
+	.contact-col{
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+
+	.google-street-view{
+
+		a.google-street-view-url{
+			&:hover{
+				.img-overflow{
+					background-color: rgba(0, 0, 0, 0.7);
+				}
+			}
+
+			.street_view{
+				z-index: 1;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+			}
+
+		}
+
+		.img-overflow{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			transition: 0.3s background-color;
+		}
+
+		img{
+			z-index: -1;
+			height: 540px;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		iframe{
+			width: 100%;
+		}
+
+	}
+
+}

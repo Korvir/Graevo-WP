@@ -1,0 +1,39 @@
+.partials{
+
+	&-promo-banner{
+
+		.container-fluid{
+			//max-width: 1700px;
+		}
+
+		h2{
+			color: $c_yellow_light;
+			line-height: 65px;
+			margin-bottom: 25px;
+			@include media(lg){
+				font-size: 2em;
+				line-height: 1.5em;
+			}
+		}
+
+		p{
+			color: $c_white;
+			margin-bottom: 50px;
+		}
+
+		.right-col{
+			@include media(lg){
+				display: none;
+			}
+		}
+
+		.left-col{
+			@include media(lg){
+				@include flex( column, center, center);
+				text-align: center;
+			}
+		}
+
+	}
+
+}

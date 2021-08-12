@@ -1,0 +1,33 @@
+.pay-page{
+	@include flex( row, center, center);
+	min-height: calc(100vh - 140px);
+
+	.woocommerce{
+		@include flex( column, flex-start, center);
+		width: 100%;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+
+	/* Watforpay system */
+	#form_wayforpay{
+		position: absolute;
+	}
+
+
+	/* Back to payment proccess */
+	form#order_review{
+		@include flex( column, center, center);
+		margin: 120px auto;
+		max-width: 700px;
+		width: 100%;
+
+		#payment{
+			width: 100%;
+		}
+
+	}
+
+
+}

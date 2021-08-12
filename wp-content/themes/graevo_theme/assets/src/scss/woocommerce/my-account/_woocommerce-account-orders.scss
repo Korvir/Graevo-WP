@@ -1,0 +1,170 @@
+.woocommerce{
+
+	&-orders-table{
+
+		.order-line{
+			cursor: pointer;
+			border-radius: 5px;
+			&:hover{
+				.woocommerce-orders-table__cell{
+					background-color: rgb(191 148 14 / 15%);
+				}
+			}
+
+
+			.woocommerce-orders-table__cell{
+				transition: .3s background-color;
+				//width: 25%;
+				@include media(lg){
+					width: calc(100% / 3) !important;
+				}
+
+			}
+
+			.woocommerce-orders-table__cell-order-number{
+				width: 25%;
+				@include media(md){
+					width: 30% !important;
+				}
+			}
+			.woocommerce-orders-table__cell-order-date{
+				width: 25%;
+				@include media(md){
+					width: 70% !important;
+				}
+			}
+			.woocommerce-orders-table__cell-order-total{
+				width: 25%;
+				@include media(lg){
+					display: none !important;
+				}
+			}
+			.woocommerce-orders-table__cell-order-status{
+				width: 25%;
+				@include media(md){
+					display: none !important;
+				}
+			}
+
+
+		}
+
+		/* If selected order line*/
+		.selected{
+
+			.woocommerce-orders-table__cell-order-status{
+				@include min-media(lg){
+					border: none;
+					strong{
+						opacity: 0;
+					}
+				}
+			}
+
+		}
+
+
+
+
+
+		&__cell-order-status{
+			border-left: 2px solid $c_grey_light;
+			text-transform: uppercase;
+		}
+
+		&__cell-order-total{
+			.woocommerce-Price-amount{
+				display: inline-block;
+				padding: 0 5px;
+			}
+		}
+
+		.woocommerce-order-details{
+			display: none;
+			border-bottom: 2px solid $c_yellow_dark;
+
+
+			&--items{
+				border-right: 1px solid $c_grey_light;
+				@include media(lg){
+					border-right: none;
+					width: 100% !important;
+				}
+				&-single{
+					border-bottom: 1px solid $c_grey_light;
+					&:last-child{
+						border-bottom: none;
+						margin-bottom: 0 !important;
+					}
+				}
+			}
+
+			.item{
+				&-image-square{
+					position: relative;
+					width: 150px;
+					height: 150px;
+					background-color: $c_grey_dark;
+					@include media(md){
+						width: 100px;
+						height: 100px;
+					}
+					img{
+						width: 50px;
+						height: 170px;
+						object-fit: contain;
+						object-position: center;
+						position: absolute;
+						bottom: 15px;
+						left: 50%;
+						transform: translateX(-50%);
+						@include media(md){
+							width: 40px;
+							height: 130px;
+						}
+					}
+				}
+				&-details{
+					max-width: 500px;
+					width: calc( 100% - 15px);
+					h5{
+
+					}
+				}
+
+			}
+
+			&--status{
+				text-transform: uppercase;
+			}
+
+		}
+
+		.shipping-totals{
+			padding-left: 150px;
+			@include media(lg){
+				padding-left: 0;
+			}
+
+			.shipping,
+			.totals{
+				max-width: 500px;
+				@include media(lg){
+					max-width: 100%;
+				}
+			}
+
+		}
+
+
+		.hide{
+			border: none;
+			strong{
+				opacity: 0;
+			}
+		}
+
+
+	}
+
+}

@@ -1,0 +1,39 @@
+.woocommerce{
+	&-account{
+
+		.woocommerce{
+
+			.left-col{
+				border-right: 1px solid $c_grey_light;
+				@include media(md){
+					border: unset;
+				}
+			}
+
+			&-MyAccount-content{
+				max-width: 1200px;
+				width: 100%;
+				margin: 0 auto;
+				float: unset;
+
+
+
+				.form-row-first,
+				.form-row-last{
+					@include media(sm){
+						width: 100%;
+					}
+				}
+
+				legend{
+					font-weight: 400;
+				}
+
+			}
+
+
+		}
+
+
+	}
+}

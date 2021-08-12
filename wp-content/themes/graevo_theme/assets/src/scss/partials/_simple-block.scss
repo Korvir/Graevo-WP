@@ -1,0 +1,27 @@
+.simple-block{
+
+	&-text-image{
+		img{
+			width: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+	&-text-text{
+
+	}
+
+	&-image-text{
+		img{
+			width: 100%;
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+
+
+}
+
+
+

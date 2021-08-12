@@ -1,0 +1,43 @@
+.search-form{
+	position: relative;
+	//max-width: 460px;
+	width: 100%;
+
+	label{
+		margin: 0;
+		width: 100%;
+	}
+
+	input[type="search"]{
+		font-family: "Roboto", sans-serif;
+		background-color: $c_beige_light;
+		color: $c_dark;
+		width: 100%;
+		border-radius: 5px;
+		margin: 0;
+		padding: .5em 2.5em .5em 2em;
+		transition: 0.3s color;
+		outline: 0;
+		@include placeholder{
+			color: $c_dark;
+		}
+
+		&:focus{
+			@include placeholder{
+				color: transparent;
+			}
+		}
+
+	}
+
+	.search-submit{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 0.5em;
+		border: none;
+		background-color: transparent;
+	}
+
+
+}

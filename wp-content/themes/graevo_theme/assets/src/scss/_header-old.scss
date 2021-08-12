@@ -1,0 +1,38 @@
+header#header{
+
+	.header-search #header-search-form{
+		@include media(lg){
+			display: none;
+		}
+	}
+
+	nav.nav{
+
+	}
+
+	nav.icons-menu{
+
+		.search-button{
+			border: none;
+			background: transparent;
+		}
+
+		a{
+			color: $c_white;
+			&:hover{
+				svg path{
+					fill: $c_yellow_light;
+				}
+
+			}
+		}
+		svg path{
+			transition: 0.3s fill;
+		}
+	}
+
+	.is_showed{
+		display: flex !important;
+	}
+
+}

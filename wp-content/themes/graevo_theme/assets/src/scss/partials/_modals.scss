@@ -1,0 +1,39 @@
+.modal{
+
+	.modal-top-line{
+		height: 80px;
+		@include media(lg){
+			height: 60px;
+		}
+	}
+
+	//------------
+	&-body{
+
+		form{
+			max-width: 400px;
+			margin: 0 auto;
+		}
+
+		&--content{}
+
+		&--actions{
+
+			.btn{
+				min-width: 70px;;
+			}
+
+		}
+
+	}
+	//------------
+
+}
+
+
+.modal-backdrop.show{
+	opacity: 0.7 !important;
+}
+
+
+

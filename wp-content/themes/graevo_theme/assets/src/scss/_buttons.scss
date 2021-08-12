@@ -1,0 +1,393 @@
+
+/* Simple Inputs */
+input[type='text'].simple_input,
+input[type='number'].simple_input,
+input[type='email'].simple_input{
+	@include placeholder{
+		color: $c_white_half;
+	}
+	border: none;
+	border-bottom: 1px solid $c_white_half;
+	background-color: transparent;
+	outline: 0;
+	color: $c_white;
+	transition: 0.3s border;
+	&:focus, &:active{
+		border-color: $c_white;
+	}
+}
+
+textarea.simple_input{
+	@include placeholder{
+		color: $c_white_half;
+	}
+	border-bottom: 1px solid $c_white_half;
+	background-color: transparent;
+	outline: 0;
+	color: $c_white;
+	transition: 0.3s border;
+	&:focus, &:active{
+		border-color: $c_white;
+	}
+}
+/* --- */
+
+
+
+
+
+/* Main inputs*/
+.form-row{
+
+	label{
+	}
+
+	input[type='text'].common-input,
+	input[type='number'].common-input,
+	input[type='tel'].common-input,
+	input[type='password'].common-input,
+	input[type='email'].common-input{
+		width: 100%;
+		border: 1px solid $c_yellow_dark;
+		background-color: transparent;
+		outline: 0;
+		height: 3em;
+		padding: 0 1em;
+		color: $c_white;
+		transition: 0.3s border;
+		&:focus, &:active{
+			border-color: $c_yellow_light;
+		}
+
+		@include placeholder{
+			color: $c_white_half;
+		}
+
+	}
+
+	textarea.common-input{
+		width: 100%;
+		border: 1px solid $c_yellow_dark;
+		background-color: transparent;
+		outline: 0;
+		padding: 1em;
+		color: $c_white;
+		transition: 0.3s border;
+		&:focus, &:active{
+			border-color: $c_yellow_light;
+		}
+
+		@include placeholder{
+			color: $c_white_half;
+		}
+	}
+
+}
+/* --- */
+
+
+/* purgecss start ignore */
+/* Buttons */
+.link_with_arrow{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 60px;
+	padding: 5px;
+	border-radius: 100px;
+	transition: 0.3s background-color, color, border-color;
+	background-color: #FFCC33;
+	color: #0C0C0C;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	min-width: 250px;
+	width: 250px;
+	@include media(md){
+		min-width: 150px;
+		min-height: 40px;
+	}
+	&:hover{
+		background-color: $c_yellow_dark;
+		color: $c_white;
+	}
+}
+.btn{
+	display: inline-block;
+	min-width: 200px;
+	min-height: 60px;
+	padding: 5px;
+	background-color: transparent;
+	border: 1px solid;
+	border-color: $c_white;
+	color: $c_dark;
+	border-radius: 100px;
+	transition: 0.3s background-color, color, border-color;
+	@include media(md){
+		min-width: 150px;
+		min-height: 40px;
+	}
+	&:hover{
+		background-color: $c_white;
+		color: $c_dark;
+	}
+
+	svg{
+		margin-right: 5px;
+		path{
+
+		}
+	}
+
+	&-square{
+		border-radius: 0 !important;
+	}
+
+	&-white-transparent{
+		background-color: transparent;
+		color: $c_white;
+		border-color: $c_white;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-weight: 500;
+		line-height: 1.25;
+		padding: 0 30px;
+		@include media(sm){
+			font-size: 0.875rem;
+		}
+		&:hover{
+			background-color: $c_dark;
+			color: $c_white;
+		}
+	}
+
+	&-white{
+		background-color: $c_white;
+		color: $c_dark;
+		border-color: $c_white;
+		&:hover{
+			background-color: $c_dark;
+			color: $c_white;
+		}
+	}
+
+	&-grey{
+		background-color: $c_grey_light;
+		color: $c_white;
+		border-color: $c_grey_light;
+		&:hover{
+			background-color: $c_grey_dark;
+			color: $c_white;
+		}
+	}
+
+	&-yellow{
+		background-color: #FFCC33;
+		color: #0C0C0C;
+		border-color: #FFCC33;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		min-width: 260px;
+		&:hover{
+			background-color: $c_yellow_dark;
+			color: $c_white;
+		}
+	}
+
+	&-red{
+		background-color: $c_red_light;
+		color: $c_white;
+		border-color: $c_red_light;
+		&:hover{
+			color: $c_white;
+			background-color: $c_red_dark;
+			border-color: $c_red_dark;
+		}
+	}
+
+	&-facebook{
+		background-color: $c_facebook;
+		color: $c_white;
+		border-color: $c_facebook;
+		&:hover{
+			color: $c_white;
+			background-color: #344888;
+			border-color: #344888;
+		}
+	}
+
+	&-google{
+		background-color: transparent;
+		color: $c_white;
+		border-color: $c_white;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-weight: 500;
+		line-height: 1.25;
+		padding: 0 30px;
+		@include media(sm){
+			font-size: 0.875rem;
+		}
+		&:hover{
+			background-color: $c_dark;
+			color: $c_white;
+		}
+	}
+
+
+}
+/* --- */
+/* purgecss end ignore */
+
+
+/* Radio & checkboxes */
+.radio-checkbox-list{
+
+	li{
+		position: relative;
+	}
+
+	input[type=checkbox],
+	input[type=radio]{
+		position: absolute;
+		opacity: 0;
+		width: 1px;
+		height: 1px;
+	}
+
+	label{
+		position: relative;
+		padding-left: 26px;
+		&:before{
+			position: absolute;
+			left: 0;
+			top: 3px;
+			content: '';
+			width: 16px;
+			height: 16px;
+			border-radius: 50%;
+			border: 1px solid $c_yellow_dark;
+		}
+	}
+	input[type=checkbox]:checked + label,
+	input[type=radio]:checked + label{
+		&:after{
+			position: absolute;
+			left: 0;
+			top: 3px;
+			content: '';
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			transform: translate(50%, 50%);
+			background: $c_yellow_dark;
+		}
+	}
+
+
+}
+/* --- */
+
+
+/* purgecss start ignore */
+
+/* Select2 plugin */
+.select2-selection--single{
+	width: 100%;
+	border: 1px solid $c_yellow_dark !important;
+	background-color: transparent !important;
+	outline: 0 !important;
+	height: 3em !important;
+	padding: 0 1em !important;
+	color: $c_dark !important;
+	border-radius: 0 !important;
+	transition: 0.3s border;
+	.select2-selection__rendered{
+		line-height: 3em !important;
+		color: $c_white !important;
+	}
+}
+.select2-search--dropdown{
+	background-color: $c_dark !important;
+	input.select2-search__field{
+		background-color: transparent !important;
+		color: $c_white !important;
+		border: 1px solid $c_yellow_dark !important;
+	}
+}
+.select2-results__options,
+.wcus-search-control__results{
+	background-color: $c_dark !important;
+	border: 1px solid $c_yellow_dark !important;
+}
+.select2-results__option[aria-selected=true],
+.select2-results__option[data-selected=true]{
+	background-color: rgba(191, 148, 14, 0.15) !important;
+}
+.select2-selection__arrow{
+	height: 3em !important;
+	b{
+		border-color: $c_white transparent transparent transparent !important;
+	}
+}
+/* --- */
+
+
+/* Nova Poshta plugin */
+.wc-ukr-shipping-np-fields{
+	input[type='text'],
+	input[type='number'],
+	input[type='tel'],
+	input[type='password'],
+	input[type='email']{
+		@include placeholder{
+			color: $c_white_half;
+		}
+		width: 100%;
+		border: 1px solid $c_yellow_dark;
+		background-color: transparent;
+		outline: 0;
+		height: 3em;
+		padding: 0 1em;
+		color: $c_white;
+		transition: 0.3s border;
+		&:focus, &:active{
+			border-color: $c_yellow_light;
+		}
+	}
+
+	textarea{
+		width: 100%;
+		border: 1px solid $c_yellow_dark;
+		background-color: transparent;
+		outline: 0;
+		padding: 1em;
+		color: $c_white;
+		transition: 0.3s border;
+		&:focus, &:active{
+			border-color: $c_yellow_light;
+		}
+	}
+}
+.wc-ukr-shipping-checkbox{
+}
+
+.wc-urk-shipping-form-group{
+	padding: 10px 0px !important;
+}
+
+.wcus-state-loading{
+	&:before{
+		background: rgba(26, 26, 26, 0.5) !important;
+	}
+}
+/* --- */
+
+
+
+/* purgecss end ignore */

@@ -1,0 +1,104 @@
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-base: 1rem;
+
+$font-weight-light:           100 !default;
+$font-weight-normal:          300 !default;
+$font-weight-bold:            500 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+// ------------------------
+// Custom colors
+$c_black : #000000 !default;
+$c_dark : #1a1a1a !default;
+$c_white : #ffffff !default;
+$c_white_half : rgba(255, 255, 255, 0.5) !default;
+$c_yellow_light : #d4af37 !default;
+$c_yellow_dark : #BF940D !default;
+$c_grey_light : #3F3F3F !default;
+$c_grey_dark : #1A1A1A !default;
+$c_beige_light : #F2F2F2 !default;
+$c_red_light : #991426 !default;
+$c_red_dark : #7e1120 !default;
+$c_green_light : #0dbf5e !default;
+$c_facebook : #475993 !default;
+
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		'c_black': $c_black,
+		'c_dark': $c_dark,
+		'c_white': $c_white,
+		'c_white_half': $c_white_half,
+		'c_yellow_light': $c_yellow_light,
+		'c_yellow_dark': $c_yellow_dark,
+		'c_grey_light': $c_grey_light,
+		'c_grey_dark': $c_grey_dark,
+		'c_beige_light': $c_beige_light,
+		'c_red_light': $c_red_light,
+		'c_red_dark': $c_red_dark,
+		'c_green_light': $c_green_light,
+		'c_facebook': $c_facebook
+	),
+	$colors
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		'c_black': $c_black,
+		'c_dark': $c_dark,
+		'c_white': $c_white,
+		'c_white_half': $c_white_half,
+		'c_yellow_light': $c_yellow_light,
+		'c_yellow_dark': $c_yellow_dark,
+		'c_grey_light': $c_grey_light,
+		'c_grey_dark': $c_grey_dark,
+		'c_beige_light': $c_beige_light,
+		'c_red_light': $c_red_light,
+		'c_red_dark': $c_red_dark,
+		'c_green_light': $c_green_light,
+		'c_facebook': $c_facebook
+	),
+	$theme-colors
+);
+// ------------------------
+
+$body-bg:                   $c_black !default;
+$body-color:                $c_white !default;
+
+$enable-flex : true;
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xl2: 1440px,
+	xl3: 1760px
+);
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1140px,
+	xl2: 1400px,
+	xl3: 1700px
+);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+	(
+		0: 0,
+		1: ($spacer * .25),
+		2: ($spacer * .5),
+		3: $spacer,
+		4: ($spacer * 1.5),
+		5: ($spacer * 3),
+		6: ($spacer * 4)
+	),
+	$spacers
+);

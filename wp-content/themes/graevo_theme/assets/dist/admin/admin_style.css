@@ -1,0 +1,27 @@
+#registered-users .registered-users-row input[type='text']{
+	width: 100%;
+}
+
+
+.button-attention{
+	background: darkred !important;
+	color: #fff !important;
+	border-color: darkred !important;
+	vertical-align: top;
+}
+
+.button-attention:hover{
+	background: red !important;
+	color: #fff !important;
+}
+
+
+/* Woocommercce */
+.order-status.status-oneclick{
+	color: #00508d;
+	background: #addbf4;
+}
+.order-status.status-cancelled {
+	color: #030300;
+	background: #f8c169;
+}

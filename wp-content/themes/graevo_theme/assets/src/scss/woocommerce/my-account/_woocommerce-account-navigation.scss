@@ -1,0 +1,29 @@
+.woocommerce{
+	&-account{
+
+		.woocommerce{
+
+
+			&-MyAccount-navigation{
+				ul{
+					li{
+						list-style: none;
+						border-bottom: 1px solid $c_grey_light;
+
+						a{
+							text-transform: uppercase;
+							color: $c_white;
+						}
+
+					}
+					li.is-active{
+						background-color: $c_yellow_dark;
+					}
+				}
+			}
+
+
+		}
+
+	}
+}

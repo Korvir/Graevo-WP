@@ -1,0 +1,102 @@
+{
+    "key": "group_60646fb5dca7e",
+    "title": "Набір",
+    "fields": [
+        {
+            "key": "field_606470168c4cf",
+            "label": "Товар",
+            "name": "tovar",
+            "type": "relationship",
+            "instructions": "Ціна на комплект автоматічно розрахується після опубликування строрінки!",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": "bundle_list"
+            },
+            "post_type": [
+                "product",
+                "product_variation"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object"
+        },
+        {
+            "key": "field_6064706f8c4d0",
+            "label": "Варіанти скидки",
+            "name": "typ_dyskonta",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "bundle_type",
+                "id": ""
+            },
+            "choices": {
+                "%": "%",
+                "Сума": "Сума"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "%",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_606470bf8c4d1",
+            "label": "Значення",
+            "name": "znachennya",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "bundle_value",
+                "id": ""
+            },
+            "default_value": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "product_cat:bandl"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Ціна на комплект автоматічно розрахується після опубликування строрінки!",
+    "modified": 1617887425
+}

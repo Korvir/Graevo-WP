@@ -1,0 +1,115 @@
+header#header{
+    .logo{
+		margin-left: 100px;
+		@media(max-width: 1760px){
+			margin-left: 50px;
+		}
+		@media(max-width: 1400px){
+			margin-left: 15px;
+		}
+	}
+
+	nav.nav{
+
+	}
+
+	.search-form-wrap{
+		display: none;
+		max-width: 475px;
+		margin: 0 auto;
+	}
+
+	nav.icons-menu{
+
+		.header-search{
+			position: relative;
+			.search-button-close{
+				display: none;
+				svg{
+					transform: scale(.8);
+				}
+			}
+
+		}
+
+		.search-button, .search-button-close{
+			border: none;
+			background: transparent;
+			position: relative;
+			top: -10px;
+			font-family: "Roboto", sans-serif;
+			font-weight: 300;
+			@media(max-width: 1439px){
+				top: auto;
+			}
+		}
+
+		a{
+			color: $c_yellow_light;
+			text-align: center;
+			&:hover{
+				svg path{
+					fill: $c_yellow_light;
+				}
+
+			}
+		}
+		svg path{
+			transition: 0.3s fill;
+		}
+		.header-search{
+			span{
+				color: $c_yellow_light;
+				text-align: center;
+			}
+		}
+		.cart{
+			position: relative;
+			text-align: center;
+			.cart-count{
+				min-width: 20px;
+				min-height: 20px;
+				padding: 2px;
+				color: white;
+				font-size: 12px;
+				line-height: 15px;
+				border-radius: 50px;
+				background: #F14336;
+				position: absolute;
+				top: -5px;
+				right: 7px;
+				@media(max-width: 1439px){
+					right: -7px;
+				}
+			}
+			.cart-amount,.cart-count{
+				font-weight: bold;
+			}
+		}
+		.account{
+			width: 100px;
+			@media(max-width: 1439px){
+				width: auto;
+			}
+		}
+		.icons-menu--item{
+			@media(max-width: 1760px){
+				margin-left: 5px!important;
+				margin-right: 5px!important;
+			}
+			@media(max-width: 1439px){
+				margin-top: 0!important;
+			}
+		}
+		span{
+			@media(max-width: 1600px){
+				font-size: 14px;
+			}
+		}
+	}
+
+	.is_showed{
+		display: flex !important;
+	}
+
+}

@@ -1,0 +1,33 @@
+.woocommerce{
+
+	&-notices-wrapper,
+	&-NoticeGroup{
+
+		.woocommerce-error,
+		.woocommerce-info,
+		.woocommerce-message{
+			margin-bottom: 1.5em;
+			background-color: $c_dark;
+		}
+
+
+		.woocommerce-error{
+			border-bottom: 2px solid $c_red_light;
+		}
+		.woocommerce-info{
+			border-bottom: 2px solid $c_yellow_light;
+		}
+		.woocommerce-message{
+			border-bottom: 2px solid green;
+		}
+
+	}
+
+
+	.woocommerce-invalid{
+		input, textarea{
+			border-color: $c_red_light !important;
+		}
+	}
+
+}
